@@ -1,0 +1,114 @@
+<div id="bio-card">
+  <div class="top-section">
+    <p class="name">Celena Toon</p>
+    <div class="image-container">
+      <img
+        class="profile-image image-default"
+        src="src/assets/me1.jpeg"
+        alt="Celena Toon"
+      />
+      <img
+        class="profile-image image-hover"
+        src="src/assets/me2.jpeg"
+        alt="Celena Toon"
+      />
+    </div>
+    <div class="section-container">
+      <p class="title">Frontend Software Engineer</p>
+      <p>10 yrs experience</p>
+      <p>📍 Boston, MA</p>
+    </div>
+  </div>
+  <hr />
+  <div class="section-container">
+    <div class="skills-section">
+      <p class="title">Languages</p>
+      <p>Javascript, Typescript, Python</p>
+    </div>
+
+    <div class="skills-section">
+      <p class="title">Libraries & Frameworks</p>
+      <p>React, Next.js, Tailwind CSS, Styled Components, Storybook, GraphQL,MapLibre, Chart.js, Electron</p>
+    </div>
+    <div class="skills-section">
+      <p class="title">Tools</p>
+      <p>Git, Redux, CI/CD, Docker, npm, yarn</p>
+    </div>
+  </div>
+  </div>
+</div>
+
+<style>
+  #bio-card {
+    background-color: #f0f0f0;
+    border: 1px solid #162656;
+    border-radius: 20px;
+    padding: 1rem;
+    width: fit-content;
+  }
+
+  .top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .name {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+
+  .section-container {
+    margin: 1rem 0;
+  }
+
+  .section-container p:not(.title) {
+    margin: 0;
+  }
+
+  .section-container .title {
+    margin-bottom: 0.5rem;
+  }
+
+  .skills-section p:not(.title) {
+    margin: 0;
+    padding-left: 1rem;
+  }
+
+  .title {
+    font-weight: 600;
+  }
+
+  .image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    transition: opacity 0.6s ease-in-out;
+  }
+
+  .image-default {
+    opacity: 1;
+  }
+
+  .image-hover {
+    opacity: 0;
+  }
+
+  .image-container:hover .image-default {
+    opacity: 0;
+  }
+
+  .image-container:hover .image-hover {
+    opacity: 1;
+  }
+</style>

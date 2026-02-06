@@ -1,0 +1,45 @@
+---
+import BioCard from './BioCard.astro';
+---
+
+<div id="portfolio">
+  <div class="left-column">
+    <BioCard />
+  </div>
+  <div class="right-column">
+    <div id="about">
+      <h1>About Me</h1>
+      <p>I'm a frontend software engineer with 10 years of experience. I'm a quick learner and I'm always looking to improve my skills.s</p>
+    </div>
+    <div id="projects">
+      <h1>Projects</h1>
+      <p>I've worked on a variety of projects over the years. Here are some of my favorites.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  #portfolio {
+    height: 100%;
+    background-color: #f0f0f0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .left-column {
+    /* Left column styles */
+  }
+
+  .right-column {
+    /* Right column styles */
+  }
+
+  /* Mobile responsive: single column layout */
+  @media (max-width: 768px) {
+    #portfolio {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
