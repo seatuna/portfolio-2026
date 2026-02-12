@@ -2,16 +2,15 @@
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="https://drive.google.com/file/d/1D8uUZfPJy_iVrMqvj5hm-G3-LbJxEsx9/view?usp=drive_link">Resume</a></li>
+    <li><a href="https://drive.google.com/file/d/1NvDxXHI1_PncEk9b_u6G3Bc9mdbxtHIz/view?usp=sharing">Resume</a></li>
   </ul>
 </nav>
 
 <style>
   #nav {
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--nav-border-color);
     height: 60px;
     width: 100%;
-    background-color: #f0f0f0;
   }
 
   ul {
@@ -24,19 +23,20 @@
   }
 
   li {
-    margin: 0 16px;
+    padding: 0 16px;
     height: 100%;
     align-content: center;
   }
 
   li:hover {
-    border-bottom: 2px solid #333;
+    border-bottom: 3px solid #333;
     cursor: pointer;
+    box-sizing: border-box;
   }
 
   a {
     text-decoration: none;
-    color: #333;
+    color: var(--text-color);
     font-size: 16px;
     font-weight: 500;
     transition: color 0.3s ease;

@@ -3,23 +3,41 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+		<link rel="manifest" href="manifest.json" />
 		<meta name="generator" content={Astro.generator} />
-		<title>My Portfolio</title>
+		<title>Celena Toon's Portfolio</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
+<style is:global>
+	:root {
+		--text-color: #162656;
+		--link-color: #5688C7;
+		--accent-color: #AA767C;
+		--bg-color: #f0f0f0;
+		--nav-border-color: #e0e0e0;
+	}
 	html,
 	body {
+		background-color: var(--bg-color);
 		margin: 0;
 		width: 100%;
 		height: 100%;
 		font-family: 'Noto sans', sans-serif;
-		color: #162656;
+		color: var(--text-color);
+	}
+	a {
+		color: var(--link-color);
+		text-decoration: none;
+	}
+	a:hover {
+		font-weight: bold;
 	}
 </style>

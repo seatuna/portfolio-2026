@@ -1,5 +1,7 @@
 ---
 import BioCard from './BioCard.astro';
+import About from './About.astro';
+import Projects from './Projects.astro';
 ---
 
 <div id="portfolio">
@@ -7,21 +9,14 @@ import BioCard from './BioCard.astro';
     <BioCard />
   </div>
   <div class="right-column">
-    <div id="about">
-      <h1>About Me</h1>
-      <p>I'm a frontend software engineer with 10 years of experience. I'm a quick learner and I'm always looking to improve my skills.s</p>
-    </div>
-    <div id="projects">
-      <h1>Projects</h1>
-      <p>I've worked on a variety of projects over the years. Here are some of my favorites.</p>
-    </div>
+    <About />
+    <Projects />
   </div>
 </div>
 
 <style>
   #portfolio {
     height: 100%;
-    background-color: #f0f0f0;
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 2rem;
@@ -33,13 +28,20 @@ import BioCard from './BioCard.astro';
   }
 
   .right-column {
-    /* Right column styles */
+    min-width: 0; /* Prevents the right column from growing too wide */
   }
 
   /* Mobile responsive: single column layout */
   @media (max-width: 768px) {
     #portfolio {
       grid-template-columns: 1fr;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    #portfolio {
+      width: 1024px;
+      margin: 0 auto;
     }
   }
 </style>

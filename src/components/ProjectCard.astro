@@ -1,0 +1,15 @@
+---
+import type { Project } from './types';
+
+type Props = Project;
+
+const { year, category, name, description, tools, url, githubUrl } = Astro.props;
+---
+<div id="project-card">
+  <p>{year} - {category}</p>
+  <h3>{name}</h3>
+  <p>{description}</p>
+  <p>{tools}</p>
+  <p><a href={url} target="_blank">View Project</a></p>
+  <p><a href={githubUrl} target="_blank">View Code</a></p>
+</div>
