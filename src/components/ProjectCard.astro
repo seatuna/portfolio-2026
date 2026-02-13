@@ -1,15 +1,72 @@
 ---
-import type { Project } from './types';
+import type { Project } from "./types";
 
 type Props = Project;
 
-const { year, category, name, description, tools, url, githubUrl } = Astro.props;
+const { year, category, name, description, tools, url, githubUrl, image } =
+  Astro.props;
 ---
-<div id="project-card">
-  <p>{year} - {category}</p>
-  <h3>{name}</h3>
-  <p>{description}</p>
-  <p>{tools}</p>
-  <p><a href={url} target="_blank">View Project</a></p>
-  <p><a href={githubUrl} target="_blank">View Code</a></p>
+
+<div class="project-card">
+  <div class="card-content">
+    <p>{year} • {category}</p>
+    <h3>{name}</h3>
+    <p>{description}</p>
+    <p>{tools}</p>
+    <p>
+      <a href={url} target="_blank"
+        ><img
+          src="src/assets/link.svg"
+          height="25"
+          width="25"
+          alt={`Link to ${name}`}
+        />View Project</a
+      >
+    </p>
+    <p>
+      <a href={githubUrl} target="_blank"
+        ><img
+          src="src/assets/github.svg"
+          height="25"
+          width="25"
+          alt={`Link to GitHub repository for ${name}`}
+        /> View Code</a
+      >
+    </p>
+  </div>
+  <div class="card-image">
+    <img src={image} alt={name} />
+  </div>
 </div>
+
+<style>
+  .project-card {
+    display: flex;
+    border-radius: 10px;
+    margin: 2rem 0;
+    background-color: white;
+  }
+
+  .card-content {
+    flex: 1;
+    padding: 1.6rem;
+  }
+
+  .card-image {
+    flex: 1;
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+  }
+
+  .card-image img {
+    max-width: 100%;
+    height: stretch;
+    object-fit: cover;
+  }
+
+  p a {
+    align-items: center;
+    display: inline-flex;
+    gap: 0.5rem;
+  }
+</style>

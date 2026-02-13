@@ -1,49 +1,61 @@
 ---
-import ProjectCard from './ProjectCard.astro';
-import type { Project } from './types';
+import ProjectCard from "./ProjectCard.astro";
+import type { Project } from "./types";
 
 const projects: Project[] = [
-{
-    name: 'License2Succeed',
-    category: 'Front End, Visualization',
-    description: 'A mapping and visualization tool that tracks the distribution of these liquor licenses, increasing transparency and enabling equitable access to these licenses by aspiring restaurateurs. My primary role was to build out the map page and frontend architecture.',
-    tools: 'React, Typescript, MapLibre, Python',
-    year: '2025',
-    url: 'https://license2succeed.org',
-    githubUrl: 'https://github.com/codeforboston/boston-liquor-license-tracker'
+  {
+    name: "License2Succeed",
+    category: "Front End, Visualization",
+    description:
+      "A mapping and visualization tool that tracks the distribution of Boston's liquor licenses, increasing transparency and enabling equitable access to these licenses by aspiring restaurateurs.",
+    tools: "React, Typescript, MapLibre, Python",
+    year: "2025",
+    image: "src/assets/license2succeed.png",
+    url: "https://license2succeed.org",
+    githubUrl: "https://github.com/codeforboston/boston-liquor-license-tracker",
   },
   {
-    name: 'MAPLE: Massachusetts Platform for Legislative Engagement',
-    category: 'Full Stack',
-    description: 'A legislative engagement platform that provides a public archive of legislative testimony, standardizes, and demystifies the testimony process, so that more people can make their voices heard. It is a space for constituents and legislators to maintain prolonged focus on key issues, and to learn more efficiently about the laws that will shape our lives.',
-    tools: 'Next.js, Typescript, Python, Firebase',
-    year: '2024',
-    url: 'https://www.mapletestimony.org/',
-    githubUrl: 'https://github.com/codeforboston/maple'
+    name: "MAPLE: Massachusetts Platform for Legislative Engagement",
+    category: "Full Stack",
+    description:
+      "A legislative engagement platform that provides a public archive of legislative testimony, standardizes, and demystifies the testimony process, so that more people can make their voices heard. It is a space for constituents and legislators to maintain prolonged focus on key issues, and to learn more efficiently about the laws that will shape our lives.",
+    tools: "Next.js, Typescript, Python, Firebase",
+    year: "2024",
+    image: "src/assets/maple.png",
+    url: "https://www.mapletestimony.org/",
+    githubUrl: "https://github.com/codeforboston/maple",
   },
   {
-    name: 'Work in the USA: The Past Decade of US Work Visas in Numbers',
-    category: 'Front End, Data, Visualization',
-    description: "Final project for Harvard Extension's Visualization class. We collected, cleaned, and visualized data on work visas from various government sources.",
-    tools: 'JavaScript, d3.js, Python',
-    year: '2018',
-    url: 'https://seatuna.github.io/us-immigration-vis',
-    githubUrl: 'https://github.com/seatuna/us-immigration-vis'
+    name: "Work in the USA: The Past Decade of US Work Visas in Numbers",
+    category: "Front End, Data, Visualization",
+    description:
+      "Final project for Harvard Extension's Visualization class. We collected, cleaned, and visualized data on work visas from various government sources.",
+    tools: "JavaScript, d3.js, Python",
+    year: "2018",
+    image: "src/assets/d3-map.png",
+    url: "https://seatuna.github.io/us-immigration-vis",
+    githubUrl: "https://github.com/seatuna/us-immigration-vis",
   },
   {
-    name: 'Exploration of Homicide Data',
-    category: 'Data Science',
-    description: "Final project for Harvard Extension's Python for Data Science course. KNN algorithm was trained and evaluated to a publicly available homicide dataset.",
-    tools: 'Python, Jupyter Notebook, Scikit-Learn, Pandas, Numpy',
-    year: '2018',
-    url: 'https://github.com/seatuna/ml-homicide-project',
-    githubUrl: 'https://github.com/seatuna/ml-homicide-project'
-  }
-]
+    name: "Exploration of Homicide Data",
+    category: "Data Science",
+    description:
+      "Final project for Harvard Extension's Python for Data Science course. KNN algorithm was trained and evaluated to a publicly available homicide dataset.",
+    tools: "Python, Jupyter Notebook, Scikit-Learn, Pandas, Numpy",
+    year: "2018",
+    image: "src/assets/ml-project.png",
+    url: "https://github.com/seatuna/ml-homicide-project",
+    githubUrl: "https://github.com/seatuna/ml-homicide-project",
+  },
+];
 ---
+
 <div id="projects">
   <h1>Projects</h1>
-  <p>I've worked on a variety of projects over the years. Here are some of my favorites.</p>
+  <p>
+    I've worked on a variety of projects over the years. Here are some of my
+    favorites.
+  </p>
   {projects.map((project) => <ProjectCard {...project} />)}
 </div>
 
