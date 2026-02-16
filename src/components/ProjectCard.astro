@@ -1,5 +1,8 @@
 ---
 import type { Project } from "./types";
+import { Image } from "astro:assets";
+import linkedinIcon from "../assets/link.svg";
+import githubIcon from "../assets/github.svg";
 
 type Props = Project;
 
@@ -15,8 +18,8 @@ const { year, category, name, description, tools, url, githubUrl, image } =
     <p>{tools}</p>
     <p>
       <a href={url} target="_blank"
-        ><img
-          src="src/assets/link.svg"
+        ><Image
+          src={linkedinIcon}
           height="25"
           width="25"
           alt={`Link to ${name}`}
@@ -25,8 +28,8 @@ const { year, category, name, description, tools, url, githubUrl, image } =
     </p>
     <p>
       <a href={githubUrl} target="_blank"
-        ><img
-          src="src/assets/github.svg"
+        ><Image
+          src={githubIcon}
           height="25"
           width="25"
           alt={`Link to GitHub repository for ${name}`}
@@ -35,7 +38,7 @@ const { year, category, name, description, tools, url, githubUrl, image } =
     </p>
   </div>
   <div class="card-image">
-    <img src={image} alt={name} />
+    <Image src={image} alt={name} />
   </div>
 </div>
 
@@ -68,5 +71,16 @@ const { year, category, name, description, tools, url, githubUrl, image } =
     align-items: center;
     display: inline-flex;
     gap: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .project-card {
+      flex-direction: column;
+    }
+
+    .card-image {
+      border-radius: 10px 10px 0 0;
+      order: -1;
+    }
   }
 </style>

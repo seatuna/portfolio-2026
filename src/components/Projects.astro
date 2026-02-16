@@ -1,6 +1,10 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
 import type { Project } from "./types";
+import license2succeedImage from "../assets/license2succeed.png";
+import mapleImage from "../assets/maple.png";
+import usWorkVisImage from "../assets/d3-map.png";
+import mlHomicideImage from "../assets/ml-project.png";
 
 const projects: Project[] = [
   {
@@ -10,7 +14,7 @@ const projects: Project[] = [
       "A mapping and visualization tool that tracks the distribution of Boston's liquor licenses, increasing transparency and enabling equitable access to these licenses by aspiring restaurateurs.",
     tools: "React, Typescript, MapLibre, Python",
     year: "2025",
-    image: "src/assets/license2succeed.png",
+    image: license2succeedImage,
     url: "https://license2succeed.org",
     githubUrl: "https://github.com/codeforboston/boston-liquor-license-tracker",
   },
@@ -21,7 +25,7 @@ const projects: Project[] = [
       "A legislative engagement platform that provides a public archive of legislative testimony, standardizes, and demystifies the testimony process, so that more people can make their voices heard. It is a space for constituents and legislators to maintain prolonged focus on key issues, and to learn more efficiently about the laws that will shape our lives.",
     tools: "Next.js, Typescript, Python, Firebase",
     year: "2024",
-    image: "src/assets/maple.png",
+    image: mapleImage,
     url: "https://www.mapletestimony.org/",
     githubUrl: "https://github.com/codeforboston/maple",
   },
@@ -32,7 +36,7 @@ const projects: Project[] = [
       "Final project for Harvard Extension's Visualization class. We collected, cleaned, and visualized data on work visas from various government sources.",
     tools: "JavaScript, d3.js, Python",
     year: "2018",
-    image: "src/assets/d3-map.png",
+    image: usWorkVisImage,
     url: "https://seatuna.github.io/us-immigration-vis",
     githubUrl: "https://github.com/seatuna/us-immigration-vis",
   },
@@ -43,7 +47,7 @@ const projects: Project[] = [
       "Final project for Harvard Extension's Python for Data Science course. KNN algorithm was trained and evaluated to a publicly available homicide dataset.",
     tools: "Python, Jupyter Notebook, Scikit-Learn, Pandas, Numpy",
     year: "2018",
-    image: "src/assets/ml-project.png",
+    image: mlHomicideImage,
     url: "https://github.com/seatuna/ml-homicide-project",
     githubUrl: "https://github.com/seatuna/ml-homicide-project",
   },

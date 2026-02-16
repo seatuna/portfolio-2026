@@ -1,15 +1,23 @@
+---
+import { Image } from "astro:assets";
+import me1 from "../assets/me1.jpeg";
+import me2 from "../assets/me2.jpeg";
+import linkedinIcon from "../assets/linkedin.svg";
+import githubIcon from "../assets/github.svg";
+---
+
 <div id="bio-card">
   <div class="top-section">
     <p class="name">Celena Toon</p>
     <div class="image-container">
-      <img
+      <Image
         class="profile-image image-default"
-        src="src/assets/me1.jpeg"
+        src={me1}
         alt="Picture of Celena peeking out from behind a pillar"
       />
-      <img
+      <Image
         class="profile-image image-hover"
-        src="src/assets/me2.jpeg"
+        src={me2}
         alt="Picture of Celena peeking out from behind a pillar, trying to get a closer look at something"
       />
     </div>
@@ -20,21 +28,13 @@
       <br />
       <p>
         <a href="https://www.linkedin.com/in/celena-toon/"
-          ><img
-            src="src/assets/linkedin.svg"
-            height="25"
-            width="25"
-            alt="LinkedIn"
-          /> LinkedIn</a>
+          ><Image src={linkedinIcon} height="25" width="25" alt="LinkedIn" /> LinkedIn</a
+        >
       </p>
       <p>
         <a href="https://github.com/seatuna"
-          ><img
-            src="src/assets/github.svg"
-            height="25"
-            width="25"
-            alt="GitHub"
-          /> GitHub</a>
+          ><Image src={githubIcon} height="25" width="25" alt="GitHub" /> GitHub</a
+        >
       </p>
     </div>
   </div>
